@@ -1,0 +1,73 @@
+#container {
+    /* horizontally center the board on the page */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#boardContainer {
+    /* the board doesn't need to take up the entire page width */
+    width: 60%;
+    
+    /* add inner padding to match the board sizing */
+    box-sizing: border-box;
+    padding: 4px;
+   
+    /* add an outer black border to the board */
+    border: 1px solid black;
+}
+
+#board {
+    /* make the dots 4px wide and dark gray */
+    border: dotted;
+    border-width: 8px;
+    border-color: #4d4d4d;
+    
+    /* set the outline (space beyond border) to light gray */
+    outline: 4px solid #cccccc;
+    
+    /* set the background to light gray to match the outline and have it go underneath the border too */
+    background: #cccccc;
+    background-clip: border-box;
+    
+    /* add inner padding to center the dots between outline and padding */
+    box-sizing: border-box;
+    padding: 4px;
+}
+
+#rowContainer {
+    /* display input rows one after the other */
+    display: flex;
+    flex-direction: column;
+    
+    /* make the rows take up all the space within the box */
+    width: 100%;
+    height: 100%;
+    
+    /* make the inside of the box white */
+    background: white;
+    
+    /* have a black border within the box */
+    border: 1px solid black;
+}
+
+#rowContainer input, #rowContainer input:focus {
+    /* make each input row take up 1/3 of the box */
+    height: 33%;
+    
+    /* center the text in the input rows */
+    text-align: center;
+    font-size: 2em;
+    
+    /* only show bottom border line */
+    border: none;
+    border-bottom: 1px solid black;
+    
+    /* get rid of focus outline */
+    outline: none;
+}
+
+/* remove the double border that occurs after last input row */
+#rowContainer input:last-child {
+    border: none;
+}
